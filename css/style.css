@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section .container {
+  width: 1170px;
+  margin: auto;
+  display: block;
+  padding: 30px 50px;
+}
+body {
+  font-family: serif;
+}
+.bg-grey {
+  background: #f7f7f7;
+}
+
+/* ---------------------------------------BANNER */
+
+#banner {
+  /* Tạo ảnh nền , cho chữ ở trên ảnh nền */
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/banner.jpg);
+  background-size: cover;
+  color: #fff;
+
+  height: 650px;
+  position: relative;
+}
+.banner-text {
+  font-size: 20px;
+
+  /* Đặt vị trí tuyệt đối , sau đó lùi lại trục x y của box cho đạt yêu cầu đề ra */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+}
+#banner h1 {
+  margin-bottom: 20px;
+}
+#banner span {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  justify-content: center;
+}
+/* ----------------------------------------NAV BAR */
+
+#nav-bar {
+  position: relative;
+}
+#nav-bar .icon-doc-text-inv {
+  display: inline-block;
+  margin-left: 120px;
+}
+#nav-bar .icon-mail-alt {
+  display: inline-block;
+  margin-left: 420px;
+}
+#nav-bar .icon-star-1 {
+  display: inline-block;
+  margin-left: 120px;
+}
+#nav-bar a {
+  text-decoration: none;
+  color: #000;
+}
+#nav-bar a:visited {
+  color: #000;
+}
+#nav-bar a:hover {
+  color: rgba(0, 0, 0, 0.47);
+}
+#nav-bar .icon-user,
+.icon-doc-text-inv,
+.icon-mail-alt,
+.icon-star-1 {
+  color: #0a75e7;
+}
+#nav-bar img {
+  /* Bo tròn hình ảnh Avatar , có viền màu trắng và ở giữa của Nar Bar */
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: solid 15px #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* -----------------------------ABOUT */
+#about .container {
+  /* Dùng Grid tạo layout */
+  line-height: 30px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 210px;
+}
+#about .container .target {
+  text-align: left;
+}
+.icon-twitter,
+.icon-facebook,
+.icon-gplus,
+.icon-linkedin {
+  color: #0a75e7;
+  cursor: pointer;
+}
+
+.mt-40 {
+  list-style-type: none;
+}
+.section-title {
+  margin-bottom: 20px;
+}
+#job-info ul {
+  list-style: none;
+  position: relative;
+}
+#job-info ul::before {
+  /* Tạo dấu point màu xanh trước các thẻ ul */
+  content: "";
+  background-color: #0a75e7;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: -5px;
+}
+#about a:hover {
+  background-color: #1a497b11;
+}
+/* --------------------------------JOB-INFO */
+#job-info .container {
+  /* Dùng Grid tạo Layout */
+  display: grid;
+  grid-template-columns: 32% 32% 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+.experience,
+.skill,
+.language,
+.activity,
+.education,
+.hobby {
+  border: solid 1px rgba(0, 0, 0, 0.1);
+}
+#job-info ul {
+  line-height: 25px;
+  padding-left: 20px;
+}
+.experience .text-color {
+  color: #fff;
+  background-color: #0a75e7;
+  padding: 1px;
+
+  border-radius: 5px;
+  display: inline;
+}
+.text-color-outside {
+  display: flex;
+}
+#job-info h1 {
+  display: inline-block;
+  width: 75%;
+  margin-bottom: 40px;
+}
+.h1-icon {
+  font-size: 40px;
+}
+
+.hobby-icon {
+  /* Bo tròn và đặt màu cho các icon */
+  font-size: 18px;
+  color: #0a75e7;
+  border: solid 1px #0a75e7;
+  padding: 8px;
+  margin-right: 31px;
+  border-radius: 50%;
+}
+.hobby p {
+  margin-top: 20px;
+  margin-right: 6px;
+  display: inline-block;
+}
+.color-blue {
+  /* Tạo thanh cấp độ  */
+  width: 40px;
+  height: 2px;
+
+  background-color: #0a75e7;
+  margin-right: 10px;
+  display: inline-block;
+}
+.color-grey {
+  /* Tạo thanh cấp độ  */
+  width: 40px;
+  height: 2px;
+  background-color: #948f8f;
+  margin-right: 10px;
+  display: inline-block;
+}
+.skill {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.language {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.activity {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+/* --------------------------------------------------------CERTIFICATE*/
+#certificate .container {
+  /* Dùng Grid tạo Layout */
+  line-height: 25px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 30px 1fr 1fr;
+  row-gap: 40px;
+}
+#certificate img {
+  width: 150px;
+  height: 80px;
+  margin-right: 20px;
+}
+.certificate_1,
+.certificate_2,
+.certificate_3 {
+  display: flex;
+}
+.certificate_1 {
+  /* Đặt vị trí trên Layout */
+  padding-bottom: 40px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border-bottom: solid 1px #d6c08d;
+}
+.certificate_2 {
+  /* Đặt ví trí trên Layout */
+  padding-bottom: 40px;
+  padding-bottom: 40px;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border-bottom: solid 1px #d6c08d;
+}
+.certificate_3 {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+/* --------------------------------------------------PROJECT */
+#project .container {
+  line-height: 20px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 20px 1fr;
+  gap: 30px;
+}
+.project_1,
+.project_2,
+.project_3 {
+  font-size: 15px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+}
+#project .content {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+  padding: 10px;
+}
+.project_1 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.project_2 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.project_3 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+#project img {
+  width: 100%;
+}
+.year {
+  /* Tạo bo tròn các góc cho chữ 2021 */
+  display: inline-block;
+  background-color: #0a75e7;
+  color: #fff;
+  padding: 3px;
+  border-radius: 8px;
+  margin-right: 30px;
+}
+#project h5 {
+  margin: 10px;
+}
+
+.icon-lamp {
+  margin-left: 15px;
+}
+/* Tạo giao diện cho Table */
+#project th {
+  border-top: solid 1px rgba(0, 0, 0, 0.1);
+  width: 20%;
+  margin-left: 30px;
+  /* vertical-align: top; */
+}
+#project td {
+  width: 70%;
+  border-top: solid 1px rgba(0, 0, 0, 0.1);
+  padding: 8px 0px 8px 20px;
+}
+/* ----------------------------------------FOOTER */
+#footer .container {
+  text-align: center;
+}
+#footer a {
+  margin-right: 50px;
+  text-decoration: none;
+}
+#footer a:link {
+  color: #0a75e7;
+}
+#footer a:visited {
+  color: #0a75e7;
+}
+#footer a:hover {
+  color: #0ae7d1;
+}
+.icon-facebook-circled,
+.icon-linkedin-circled,
+.icon-github-circled {
+  font-size: 24px;
+}
